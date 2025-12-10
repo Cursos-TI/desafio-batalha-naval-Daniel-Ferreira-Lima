@@ -16,9 +16,29 @@ int navio2[3] = {0, 0, 0}; //CRIANDO O TAMANHO DOS NAVIOS
 mapa[1][4] = 3;
 mapa[1][5] = 3;    //INSERINDO NO MAPA ONDE ELES ESTÃO, 1 NA VERTICAL E 1 NA HORIZONTAL//
 mapa[1][6] = 3;    
-mapa[4][2] = 3;
-mapa[5][2] = 3;
-mapa[6][2] = 3;
+mapa[4][7] = 3;
+mapa[5][7] = 3;
+mapa[6][7] = 3;
+
+for (int i = 0; i < 3; i++)
+{
+ for(int j = 0; j < 3; j++){
+    if (i == j){
+        mapa[i][i] = 3;   //INSERINDO NO MAPA OS NAVIOS EM FORMATO DIAGONAL//
+    }
+  }   
+    
+}
+
+for (int i = 0; i < 10; i++)
+{
+ for(int j = 0; j < 3; j++){
+    if (i + j == 9){     //CRIANDO O SEGUNDO NAVIO//
+        mapa[i][i] = 3;  //UTILIZANDO A LÓGICA PARA DELIMITAR QUANTOS 0S SERÃO PREENCHIDOS//
+    }
+    }   
+    
+}
 
 for (int i = 0; i < 10; i++)
 {
