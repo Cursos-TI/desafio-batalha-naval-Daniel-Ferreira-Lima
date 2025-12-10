@@ -40,6 +40,48 @@ for (int i = 0; i < 10; i++)
     
 }
 
+for (int i = 0; i < 9; i++)
+{
+ for(int j = 0; j < 9; j++){    //MATRIZ COM HABILIDADE DA CRUZ INSERIDA NO MAPA//
+      if (i == 4 || j == 4) {
+    mapa[i][j] = 1;
+     }
+ } 
+}   
+    
+int topo = 0;       // linha onde começa o cone
+int centro = 5;     // coluna do centro
+int altura = 3;     // número de linhas
+
+
+for (int i = 0; i < 10; i++)
+{
+ for(int j = 0; j < 10; j++){ 
+if (i >= topo && i < topo + altura) {
+
+    int desloc = i - topo; 
+
+    if (j >= centro - desloc && j <= centro + desloc) {
+        mapa[i][j] = 1;
+    }
+  }
+ }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 for (int i = 0; i < 10; i++)
 {
  for(int j = 0; j < 10; j++){
@@ -49,5 +91,8 @@ for (int i = 0; i < 10; i++)
 }
 
 return 0;
-
 }
+
+
+
+
